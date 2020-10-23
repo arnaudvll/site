@@ -1,18 +1,37 @@
 #entete{
-  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color:rgb(193, 241, 250) ;
+
 }
 #div-titre{
-width:100px 100px;
+  margin-top: 70px;
 }
 #div-logo{
-  width:100px 100px ;
+
 }
 #div-connexion{
-  width: 100px 100px;
+margin-top: 120px;
 }
-
-
-
+#logo{
+  width: 250px;
+  height: 320px;
+}
+.connexion{
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 20px;
+  border-style: solid;
+  color: #2A2333;
+  text-decoration: none;
+}
+#titre{
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  text-shadow:2px 2px 5px #a7d9ff;
+  border: 5px solid #a7d9ff;
+  border-radius: 10px;
+}
 
 #menu-demo2, #menu-demo2 ul{
     padding:0;
