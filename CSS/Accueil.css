@@ -2,28 +2,33 @@
   display: flex;
   justify-content: space-around;
   background-color:rgb(193, 241, 250) ;
-
 }
+
 #div-titre{
   margin-top: 70px;
 }
-#div-logo{
 
+#div-logo{
+  margin-right: 230px;
 }
+
 #div-connexion{
-margin-top: 120px;
+margin-top: 50px;
 }
+
 #logo{
   width: 250px;
   height: 320px;
 }
+
 .connexion{
   font-family: "Lucida Console", Courier, monospace;
-  font-size: 20px;
+  font-size: 17px;
   border-style: solid;
   color: #2A2333;
   text-decoration: none;
 }
+
 #titre{
   font-family: "Lucida Console", Courier, monospace;
   font-size: 40px;
@@ -31,6 +36,12 @@ margin-top: 120px;
   text-shadow:2px 2px 5px #a7d9ff;
   border: 5px solid #a7d9ff;
   border-radius: 10px;
+}
+
+p {
+  font-family: "Lucida Console", Courier, monospace;
+  font-size:18x;
+  color: rgb(255, 255, 255)
 }
 
 #menu-demo2, #menu-demo2 ul{
@@ -43,6 +54,7 @@ margin-top: 120px;
     display:inline-block;
     position:relative;
     border-radius:8px 8px 0 0;
+    padding:2px 10px;
     }
     #menu-demo2 ul li{
     display:inherit;
@@ -51,9 +63,7 @@ margin-top: 120px;
     #menu-demo2 ul li:hover{
     border-radius:0;
     }
-    #menu-demo2 ul li:last-child{
-    border-radius:0 0 8px 8px;
-    }
+   
     #menu-demo2 ul{
     position:absolute;
     z-index: 1000;
@@ -70,61 +80,47 @@ margin-top: 120px;
     }
     /* background des liens menus */
     #menu-demo2 li:first-child{
-    background-color: #65537A;
-    background-image:-webkit-linear-gradient(top, #65537A 0%, #2A2333 100%);
-    background-image:linear-gradient(to bottom, #65537A 0%, #2A2333 100%);
+    background-color: #dfd330;
     }
     #menu-demo2 li:nth-child(2){
-    background-color: #729EBF;
-    background-image: -webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
-    background-image:linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+    background-color: #dfd330;
     }
     #menu-demo2 li:nth-child(3){
-    background-color: #F6AD1A;
-    background-image:-webkit-linear-gradient(top, #F6AD1A 0%, #9F391A 100%);
-    background-image:linear-gradient(to bottom, #F6AD1A 0%, #9F391A 100%);
+    background-color: #dfd330;
     }
     #menu-demo2 li:last-child{
-    background-color: #CFFF6A;
-    background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
-    background-image:linear-gradient(to bottom, #CFFF6A 0%, #677F35 100%);
+    background-color: #dfd330;
     }
     /* background des liens sous menus */
     #menu-demo2 li:first-child li{
-    background:#2A2333;
+    background:#c0b62a;
     }
     #menu-demo2 li:nth-child(2) li{
-    background:#333A40;
+    background:#c0b62a;
     }
-    #menu-demo2 li:nth-child(3) li{
-    background:#9F391A;
-    }
-    #menu-demo2 li:last-child li{
-    background:#677F35;
-    }
+
     /* background des liens menus et sous menus au survol */
     #menu-demo2 li:first-child:hover, #menu-demo2 li:first-child li:hover{
-    background:#65537A;
+    background:#c0b62a;
     }
     #menu-demo2 li:nth-child(2):hover, #menu-demo2 li:nth-child(2) li:hover{
-    background:#729EBF;
+    background:#c0b62a;
     }
     #menu-demo2 li:nth-child(3):hover, #menu-demo2 li:nth-child(3) li:hover{
-    background:#F6AD1A;
+    background:#c0b62a;
     }
     #menu-demo2 li:last-child:hover, #menu-demo2 li:last-child li:hover{
-    background:#CFFF6A;
+    background:#c0b62a;
     }
     /* les a href */
     #menu-demo2 a{
     text-decoration:none;
     display:block;
-    padding:8px 32px;
     color:#fff;
     font-family:arial;
     }
     #menu-demo2 ul a{
-    padding:8px 0;
+    padding:10px 10px;
     }
     #menu-demo2 li:hover li a{
     color:#fff;
@@ -134,21 +130,26 @@ margin-top: 120px;
     color:#000;
     }
 
+#destination{
+  list-style:none ;
+}  
 
-.diaporama li {
-    animation: slide 13s ease infinite 0s;
-    width: 300%;
-  }
-  @keyframes slide {
-    0%, 23.08%, 100% {
-      transform: translate(0,0);
-    }
-    34.62%, 57.69% {
-      transform: translate(-33.33%,0);
-    }
-    69.23%, 92.31% {
-      transform: translate(-66.67%,0);
-    }
-  }
+#circuit{
+  list-style:none;
+}
   
+footer {
+  background-color: rgb(212, 212, 212);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
   
