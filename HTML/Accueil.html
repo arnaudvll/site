@@ -10,23 +10,32 @@
 
     <body>
         <div id="entete" >
-        <div id="div-titre">
-            <h1 id="titre"> Travel-ô-ciraptor </h1>
+            <div id="div-titre">
+                <h1 id="titre"> Travel-ô-ciraptor </h1>
+            </div>
+            <div id="div-logo">
+                <a href="Accueil.html">
+                    <img id="logo" src="/site/Medias/logo.png">
+                </a>
+            </div>
+            <div id="div-connexion">
+                <a class="connexion" href="Connexion.html">Se connecter</a>
+            </div>
         </div>
-        <div id="div-logo">
-            <a href="Accueil.html">
-                <img id="logo" src="/site/Medias/logo.png">
-            </a>
-        </div>
-        <div id="div-connexion">
-            <a class="connexion" href="Connexion.html">Se connecter</a>
-        </div>
+
+        <div id="tri">
+            <button  id="boutontri" onclick=AfficherOptTri()>Trier</button>         
+                <select style='display:none;' name='Tri' id='choixtri' onchange="AfficherTri()">
+                <option value="1">Prix croissant</option>
+                <option value='2'>Prix décroissant</option>
+                <option value='3'>Les plus populaires</option>
+            </select>
         </div>
         
 
         <ul id="menu-demo2">
             <li><p>Destinations</p>
-                <ul > 
+                <ul> 
                     <li><a href="Reservation.html">Lyon</a></li>
                     <li><a href="Reservation.html">Berlin</a></li>
                     <li><a href="Reservation.html">Barcelone</a></li>
@@ -48,21 +57,21 @@
             <li><a href="Contact.html"><p>Nous contacter</p></a></li>
         </ul>
 
-        <h3>Nos destinations</h5>
+        <h3>Nos destinations</h3>
 
         <ul id="destination">
             <li><a href="Reservation.html">
-                <img id="lyon" src="/site/Medias/Lyon.jpg"></a></li>
+                <img id='lyon' src='' ></a></li>
             <li><a href="Reservation.html">
-                <img id="berlin" src="/site/Medias/Berlin.jpg"></a></li>
+                <img  id="berlin" src=""></a></li>
             <li><a href="Reservation.html">
-                <img id="barcelone" src="/site/Medias/Barcelone.jpg"></a></li>
+                <img  id="barcelone" src=""></a></li>
             <li><a href="Reservation.html">
-                <img id="sf" src="/site/Medias/SF.jpg"></a></li>
+                <img  id="sf" src=""></a></li>
             <li><a href="Reservation.html">
-                <img id="jakarta" src="/site/Medias/Jakarta.jpg"></a></li>
+                <img  id="jakarta" src=""></a></li>
             <li><a href="Reservation.html">
-                <img id="tokyo" src="/site/Medias/Tokyo.jpg"></a></li>
+                <img  id="tokyo" src=""></a></li>
         </ul>
         
         <h3>Nos circuits</h3>
@@ -77,7 +86,10 @@
             <li><a href="Reservation.html">
                 <img id="asie" src="/site/Medias/Asie.jpg"></a></li>
         </ul>
-
         
         <footer>Pied de page</footer>
-        
+
+        <script src="/site/JS/Script.js"></script>
+    
+    </body>
+</html>
