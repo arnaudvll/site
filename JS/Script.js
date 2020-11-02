@@ -33,6 +33,8 @@ let nord= new destination('8',"/site/Medias/Nord.jpg",900);
 let safari= new destination('9',"/site/Medias/safari.jpg",1000);
 let asie= new destination('10',"/site/Medias/Asie.jpg",1200);
 
+let offre=document.getElementById('offre')
+
 let prixcroissant= [lyon,berlin,barcelone,jakarta,sf,tokyo,nord,safari,asie,us];
 let prixdecroissant= [us,asie,safari,nord,tokyo,sf,jakarta,barcelone,berlin,lyon];
 let popu= [lyon,safari,sf,us,tokyo,asie,barcelone,berlin,nord,jakarta];
@@ -41,16 +43,27 @@ function AfficherOptTri(){
     document.getElementById('choixtri').style='display:inline;'
 }
 
-function Id(x){
-    return ('x')
-}
 
 function AfficherTri(){
+    let lienimg=''
+    let i    
     if (document.getElementById('choixtri').value==='1'){
-        let i 
         for (i of prixcroissant){
-            document.getElementById(Id(i)).setAttribute('src',i.img)
-        }       
+            lienimg += '<a href="Reservation.html"> <img id=' + i.id + ' src=' + i.img + '></a>'       
+        }    
+        offre.innerHTML = lienimg
+    
+    }else if (document.getElementById('choixtri').value==='2'){
+        for (i of prixdecroissant){
+            lienimg += '<a href="Reservation.html"> <img id=' + i.id + ' src=' + i.img + '></a>'       
+        }
+        offre.innerHTML = lienimg   
+    
+    }else if (document.getElementById('choixtri').value==='3'){
+        for (i of popu){
+            lienimg += '<a href="Reservation.html"> <img id=' + i.id + ' src=' + i.img + '></a>'       
+        }
+        offre.innerHTML = lienimg  
     }
 }
 
