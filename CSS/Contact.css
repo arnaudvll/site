@@ -1,0 +1,85 @@
+#entete{
+    display: flex;
+    justify-content: space-around;
+    background-color:rgb(193, 241, 250) ;
+  }
+  
+  #div-titre{
+    margin-top: 70px;
+  }
+  
+  #div-logo{
+    margin-right: 230px;
+  }
+  
+  #div-connexion{
+  margin-top: 50px;
+  }
+  
+  #logo{
+    width: 250px;
+    height: 320px;
+  }
+  
+  #connexion{
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 17px;
+    border-style: solid;
+    color: #2A2333;
+    text-decoration: none;
+  }
+  
+  #titre{
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-shadow:2px 2px 5px #a7d9ff;
+    border: 5px solid #a7d9ff;
+    border-radius: 10px;
+  }
+#mail{
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 17px;
+    border-style: solid;
+    color: #2A2333;
+    text-decoration: none;
+    display: flex;
+    justify-content: center; 
+
+}
+h2{
+	color: #dd0000;
+	font: 1.2em Georgia, Arial;
+	border-bottom: 1px solid #E1E2E8;
+	padding: 30px 0 3px 0;
+    }
+.exp{
+    margin: 12px 0;
+}
+.exp_date{
+    float: left;
+    width: 160px;
+}
+.exp_soc{
+    float: right;
+}
+.exp_exp{
+    width: 340px;
+    margin-left: 160px;
+    margin-right: 120px;
+}
+.text {
+	margin-top: 10px;
+}
+footer {
+    background-color: rgb(212, 212, 212);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  
