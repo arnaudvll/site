@@ -1,7 +1,18 @@
+body{
+  height: auto;
+  background-image:url(../Medias/fond.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: auto;
+  padding:0px;
+}
+
+
 #entete{
   display: flex;
   justify-content: space-around;
   background-color:rgb(193, 241, 250) ;
+  margin-bottom: 0%;
 }
 
 #div-titre{
@@ -13,17 +24,20 @@
 }
 
 #div-connexion{
-margin-top: 50px;
+margin-top: 100px;
 }
 
 #logo{
-  width: 250px;
-  height: 320px;
+  width: 300px;
+  height: 400px;
+  margin-bottom: -100px;
+  margin-top: -40px;
+  margin-right: -200px;
 }
 
 .connexion{
   font-family: "Lucida Console", Courier, monospace;
-  font-size: 17px;
+  font-size: 25px;
   border-style: solid;
   color: #2A2333;
   text-decoration: none;
@@ -32,8 +46,8 @@ margin-top: 50px;
 #titre{
   font-family: "Lucida Console", Courier, monospace;
   font-size: 40px;
-  color: rgb(0, 0, 0);
-  text-shadow:2px 2px 5px #a7d9ff;
+  color: rgb(255, 255, 255);
+  text-shadow:4px 4px 10px #01335a;
   border: 5px solid #a7d9ff;
   border-radius: 10px;
 }

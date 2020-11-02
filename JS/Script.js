@@ -1,6 +1,6 @@
 var bdd = 
-    {usr1:'Bob',mdp1:'bob01',
-    usr2:'arnaud',mdp2:"ville",
+    {usr1:'Bob', mdp1:'bob01',
+    usr2:"arnaud", mdp2:"ville",
     usr3:"maxime", mdp3:"chouraqui"}
 
 let utilisateur = document.getElementById('utilisateur')
@@ -22,16 +22,16 @@ class destination {
     }
 }
 
-let lyon= new destination('1',"/site/Medias/Lyon.jpg",100);
-let berlin= new destination('2',"/site/Medias/Berlin.jpg",200);
-let barcelone= new destination('3',"/site/Medias/Barcelone.jpg",250);
-let sf= new destination('4',"/site/Medias/SF.jpg",400);
-let jakarta= new destination('5',"/site/Medias/Jakarta.jpg",350);
-let tokyo= new destination('6',"/site/Medias/Tokyo.jpg",400);
-let us= new destination('7',"/site/Medias/US.jpg",1300);
-let nord= new destination('8',"/site/Medias/Nord.jpg",900);
-let safari= new destination('9',"/site/Medias/safari.jpg",1000);
-let asie= new destination('10',"/site/Medias/Asie.jpg",1200);
+let lyon= new destination('1',"../Medias/Lyon.jpg",100);
+let berlin= new destination('2',"../Medias/Berlin.jpg",200);
+let barcelone= new destination('3',"../Medias/Barcelone.jpg",250);
+let sf= new destination('4',"../Medias/SF.jpg",400);
+let jakarta= new destination('5',"../Medias/Jakarta.jpg",350);
+let tokyo= new destination('6',"../Medias/Tokyo.jpg",400);
+let us= new destination('7',"../Medias/US.jpg",1300);
+let nord= new destination('8',"../Medias/Nord.jpg",900);
+let safari= new destination('9',"../Medias/safari.jpg",1000);
+let asie= new destination('10',"../Medias/Asie.jpg",1200);
 
 let offre=document.getElementById('offre')
 
