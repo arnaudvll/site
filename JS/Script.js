@@ -49,23 +49,37 @@ function AfficherTri(){
     let i    
     if (document.getElementById('choixtri').value==='1'){
         for (i of prixcroissant){
-            lienimg += '<a href="Reservation.html"> <img id=' + i.id + ' src=' + i.img + '></a>'       
+            lienimg += '<a href="../HTML/Reservation.html?id=' + i.id + '"><img  id=' + i.id + ' src=' + i.img + '></a>'       
         }    
         offre.innerHTML = lienimg
     
     }else if (document.getElementById('choixtri').value==='2'){
         for (i of prixdecroissant){
-            lienimg += '<a href="Reservation.html"> <img id=' + i.id + ' src=' + i.img + '></a>'       
+            lienimg += '<a href="../HTML/Reservation.html?id=' + i.id + '"><img id=' + i.id + ' src=' + i.img + '></a>'       
         }
         offre.innerHTML = lienimg   
     
     }else if (document.getElementById('choixtri').value==='3'){
         for (i of popu){
-            lienimg += '<a href="Reservation.html"> <img id=' + i.id + ' src=' + i.img + '></a>'       
+            lienimg += '<a href="../HTML/Reservation.html?id=' + i.id + '"><img id=' + i.id + ' src=' + i.img + '></a>'       
         }
         offre.innerHTML = lienimg  
     }
 }
 
 AfficherTri()
+
+function infoimg(i){
+
+}
+
+function ajoutURL(i){
+    if (document.getElementById('choixtri').value == '1') { //tri croissant
+        document.location.href = '/HTML/Reservation.html?id=' + prixcroissant[i].id;
+    } else if (document.getElementById('choixtri').value == '2') { //tri décroissant
+        document.location.href = '/HTML/Reservation.html?id=' + prixdecroissant[i].id;
+    } else if (document.getElementById('choixtri').value == '3') { //tri par popularité
+        document.location.href = '/HTML/Reservation.html?id=' + popu[i].id;
+    }
+}
 

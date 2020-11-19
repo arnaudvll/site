@@ -2,20 +2,33 @@
 
 <html lang="fr">
     <head>
+        <link type='/text/css' href='/site/'>
         <meta charset="UTF-8">
         <title>Page de réservation</title>
     </head>
 
     <body>
-        <section>
+        <div id="entete" >
+            <div id="div-titre">
+                <h1 id="titre"> Travel-ô-ciraptor </h1>
+            </div>
+            <div id="div-logo">
+                <a href="Accueil.html">
+                    <img id="logo" src="../Medias/logo.png">
+                </a>
+            </div>
+            <div id="div-connexion">
+                <a class="connexion" href="Connexion.html">Se connecter</a>
+            </div>
+        </div>
 
-        </section>
-
-        <section>
-            <form action="Recapitulatif.html" oninput="x.value=nbadulte.value*">
+        <div id='destination'></div>
+            <form action="Recapitulatif.html" >
                 <fieldset>
+                    <legend >Formulaire de réservation: </legend>
+
                 <label for="nfamille">Nom de famille:</label><br>
-                <input type="text" id="nfamille" name="nfamille" required><br>
+                <input type="text" id="nfamille" name="nfamille" required autofocus><br>
 
                 <label for="prenom">Prénom:</label><br>
                 <input type="text" id="prenom" name="prenom" required><br>
@@ -27,38 +40,34 @@
                 <input type="phone" id="numtel" name="numtel" placeholder="0X XX XX XX XX" pattern="[0-9]{10}"><br>
 
                 <label for="datedépart">Date de départ:</label><br>
-                <input type="date" id="datedépart" name="datedépart" required><br>
+                <input type="date" id="datedépart" name="datedépart"  required onchange=dates();prixtot() ><br>
 
                 <label for="dateretour">Date de retour:</label><br>
-                <input type="date" id="dateretour" name="dateretour" min="datedépart" required><br>
+                <input type="date" id="dateretour" name="dateretour"  required onchange=prixtot();><br>
 
                 <label for="nbadulte">Nombre d'adultes:</label><br>
-                <input type="text" id="nbadulte" name="nbadulte" min="1" required><br>
+                <input type="number" id="nbadulte" name="nbadulte" min="1" required onchange=prixtot()><br>
 
-                <label for="nbenfants">Nombre d'enfants (-12 ans):</label><br>
-                <input type="text" id="nbenfants" name="nbenfants" min="0" required><br>
+                <label for="nbenfant">Nombre d'enfants (-12 ans):</label><br>
+                <input type="number" id="nbenfant" name="nbenfant" min="0" required onchange=prixtot()><br>
 
-                <p>Petit déjeuner ?</p>
+                <p>Petit déjeuner ? (12€ par personne par jour)</p>
                
-                <input type="radio" id="oui" name="ok">
-                <label for="oui">Oui</label><br>
+                <input type="radio" id="ouidej" name="ok" required onchange=prixtot()>
+                <label for="ouidej">Oui</label><br>
             
-                <input type="radio" id="non" name="ok">
-                <label for="non">Non</label><br><br>
+                <input type="radio" id="nondej" name="ok" required onchange=prixtot() >
+                <label for="nondej">Non</label><br><br>
 
                 <label for="renseignement">Besoin d'un renseignement ?</label><br>               
                 <textarea name="renseignement" rows="10" cols="40"></textarea><br><br>
 
-                <p>Prix total: </p> 
-
-
-
-
+                <p id='test'>Prix total:</p><p id='prixtot'> </p> 
 
                 <input type="submit" value="Valider">
                 <input type ="reset" value="Annuler">
                 </fieldset>
             </form>
-        </section>
+            <script src="../JS/ScriptResa.js"></script>
     </body>
 </html>
