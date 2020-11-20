@@ -2,7 +2,7 @@
 
 <html lang="fr">
     <head>
-        <link type='/text/css' href='/site/'>
+        <link type='text/css' rel='stylesheet' href='../CSS/Reservation.css'>
         <meta charset="UTF-8">
         <title>Page de réservation</title>
     </head>
@@ -21,9 +21,31 @@
                 <a class="connexion" href="Connexion.html">Se connecter</a>
             </div>
         </div>
+        <ul id="menu-demo2">
+            <li><p>Destinations</p>
+                <ul> 
+                    <li><a href="Reservation.html?id=1">Lyon</a></li>
+                    <li><a href="Reservation.html?id=2">Berlin</a></li>
+                    <li><a href="Reservation.html?id=3">Barcelone</a></li>
+                    <li><a href="Reservation.html?id=4">San Francisco</a></li>
+                    <li><a href="Reservation.html?id=5">Jarkarta</a></li>
+                    <li><a href="Reservation.html?id=6">Tokyo</a></li>
+                </ul>
+            </li>
+            <li><p>Circuits</p>
+                <ul>
+                    <li><a href="Reservation.html?id=7">Road Trip US</a></li>
+                    <li><a href="Reservation.html?id=8">Pays du Nord</a></li>
+                    <li><a href="Reservation.html?id=9">Safari</a></li>
+                    <li><a href="Reservation.html?id=10">Road Trip Asie</a></li>                  
+                </ul>
+            </li>
+            <li><a href="MapMonde.html"><p>Carte du monde</p></a></li>
+            <li><a href="Contact.html"><p>Nous contacter</p></a></li>
+        </ul>
 
-        <div id='destination'></div>
-            <form action="Recapitulatif.html" >
+        <div id='destination'>Votre voyage: </div><br>
+            <form action="Recapitulatif.html">
                 <fieldset>
                     <legend >Formulaire de réservation: </legend>
 
@@ -62,7 +84,7 @@
                 <label for="renseignement">Besoin d'un renseignement ?</label><br>               
                 <textarea name="renseignement" rows="10" cols="40"></textarea><br><br>
 
-                <p id='test'>Prix total:</p><p id='prixtot'> </p> 
+                <p>Prix total:</p><p id='prixtot'> </p> 
 
                 <input type="submit" value="Valider">
                 <input type ="reset" value="Annuler">
