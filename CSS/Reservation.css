@@ -60,6 +60,11 @@ body {
     list-style:none;
     text-align:center;
     }
+    #menu-demo2 p {
+      font-family: "Lucida Console", Courier, monospace;
+      font-size:18x;
+      color: rgb(255, 255, 255)
+    }
     #menu-demo2 li{
     display:inline-block;
     position:relative;

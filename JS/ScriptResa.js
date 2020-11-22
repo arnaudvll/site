@@ -40,12 +40,12 @@ function retrouverdest(){
     let i
     for (i of prixcroissant){
         if (i.id==sejourid){
-            return i.nom
+            return i
         }
     }
 }
 
-document.getElementById('destination').innerHTML+=retrouverdest()
+document.getElementById('destination').innerHTML+=retrouverdest().nom
   
 function dates(){
     dateretour.min=datedepart.valueAsDate.getFullYear()+'-'+(datedepart.valueAsDate.getMonth()+1)+'-'+(datedepart.valueAsDate.getDate()+1);
@@ -53,7 +53,7 @@ function dates(){
 
 function prixtot(){
     let dureesejour=dateretour.valueAsDate.getDate()-datedepart.valueAsDate.getDate()
-    let prixtot=(0.4 * nbenfant.value * dureesejour *100) + (nbadulte.value * dureesejour * 100)
+    let prixtot=(0.4 * nbenfant.value * dureesejour * retrouverdest().prix) + (nbadulte.value * dureesejour * retrouverdest().prix)
     if (document.getElementById('ouidej').checked){
         prixtot+=(parseInt(nbadulte.value)+parseInt(nbenfant.value))*12*dureesejour;
     } 
