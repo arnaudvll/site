@@ -4,8 +4,6 @@ let dateretour=document.getElementById('dateretour');
 datedepart.min=dateajd.getFullYear()+'-'+(dateajd.getMonth()+1)+'-'+dateajd.getDate();
 dateretour.min=dateajd.getFullYear()+'-'+(dateajd.getMonth()+1)+'-'+(dateajd.getDate()+1);
 
-
-
 let nbadulte=document.getElementById('nbadulte');
 let nbenfant=document.getElementById('nbenfant');
 
@@ -35,6 +33,22 @@ let popu= [lyon,safari,sf,us,tokyo,asie,barcelone,berlin,nord,jakarta];
 
 let sejourid=new URLSearchParams(window.location.search).get('id');
 
+boutonhaut = document.getElementById("boutonhaut");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    boutonhaut.style.display = "block";
+  } else {
+    boutonhaut.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.documentElement.scrollTop = 0; 
+}
+
 
 function retrouverdest(){
     let i
@@ -45,7 +59,7 @@ function retrouverdest(){
     }
 }
 
-document.getElementById('destination').innerHTML+=retrouverdest().nom
+document.getElementById('destination').innerHTML+=retrouverdest().nom + ' (' + retrouverdest().prix + '€ par jour)' 
   
 function dates(){
     dateretour.min=datedepart.valueAsDate.getFullYear()+'-'+(datedepart.valueAsDate.getMonth()+1)+'-'+(datedepart.valueAsDate.getDate()+1);
@@ -60,3 +74,4 @@ function prixtot(){
     document.getElementById('prixtot').innerHTML=prixtot + '€'
 }
 prixtot()
+

@@ -21,6 +21,9 @@
                 <a class="connexion" href="Connexion.html">Se connecter</a>
             </div>
         </div>
+
+        <button onclick="topFunction()" id="boutonhaut" >Retour en haut</button>
+
         <ul id="menu-demo2">
             <li><p>Destinations</p>
                 <ul> 
@@ -65,7 +68,7 @@
                 <input type="date" id="datedépart" name="datedépart"  required onchange=dates();prixtot() ><br>
 
                 <label for="dateretour">Date de retour:</label><br>
-                <input type="date" id="dateretour" name="dateretour"  required onchange=prixtot();><br>
+                <input type="date" id="dateretour" name="dateretour"  required onchange=dates();prixtot();><br>
 
                 <label for="nbadulte">Nombre d'adultes:</label><br>
                 <input type="number" id="nbadulte" name="nbadulte" min="1" required onchange=prixtot()><br>
@@ -75,10 +78,10 @@
 
                 <p>Petit déjeuner ? (12€ par personne par jour)</p>
                
-                <input type="radio" id="ouidej" name="ok" required onchange=prixtot()>
+                <input type="radio" id="ouidej" name="ptitdej" value='oui' required onchange=prixtot()>
                 <label for="ouidej">Oui</label><br>
             
-                <input type="radio" id="nondej" name="ok" required onchange=prixtot() >
+                <input type="radio" id="nondej" name="ptitdej" value='non' required onchange=prixtot() >
                 <label for="nondej">Non</label><br><br>
 
                 <label for="renseignement">Besoin d'un renseignement ?</label><br>               
@@ -90,6 +93,10 @@
                 <input type ="reset" value="Annuler">
                 </fieldset>
             </form>
+
+            <footer>Pied de page</footer>
+
             <script src="../JS/ScriptResa.js"></script>
+
     </body>
 </html>

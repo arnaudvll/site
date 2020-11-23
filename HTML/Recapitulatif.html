@@ -3,12 +3,64 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <link type='text/css' rel='stylesheet' href='/CSS/Recap.css'>
         <title>Récapitulatif de la commande</title>
     </head>
 
     <body>
-        <h3> Récapitulatif de votre commande:</h3>
-        <p>Votre numéro de commande:</p>
-        <p>Vos informations:</p> 
+        <div id="entete" >
+            <div id="div-titre">
+                <h1 id="titre"> Travel-ô-ciraptor </h1>
+            </div>
+            <div id="div-logo">
+                <a href="Accueil.html">
+                    <img id="logo" src="../Medias/logo.png">
+                </a>
+            </div>
+            <div id="div-connexion">
+                <a class="connexion" href="Connexion.html">Se connecter</a>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="boutonhaut" >Retour en haut</button>
+
+        <ul id="menu-demo2">
+            <li><p>Destinations</p>
+                <ul> 
+                    <li><a href="Reservation.html?id=1">Lyon</a></li>
+                    <li><a href="Reservation.html?id=2">Berlin</a></li>
+                    <li><a href="Reservation.html?id=3">Barcelone</a></li>
+                    <li><a href="Reservation.html?id=4">San Francisco</a></li>
+                    <li><a href="Reservation.html?id=5">Jarkarta</a></li>
+                    <li><a href="Reservation.html?id=6">Tokyo</a></li>
+                </ul>
+            </li>
+            <li><p>Circuits</p>
+                <ul>
+                    <li><a href="Reservation.html?id=7">Road Trip US</a></li>
+                    <li><a href="Reservation.html?id=8">Pays du Nord</a></li>
+                    <li><a href="Reservation.html?id=9">Safari</a></li>
+                    <li><a href="Reservation.html?id=10">Road Trip Asie</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="MapMonde.html"><p>Carte du monde</p></a></li>
+            <li><a href="Contact.html"><p>Nous contacter</p></a></li>
+        </ul>
+
+        <div id='content'>
+            <h3> Récapitulatif de votre commande:</h3>
+            <p id='ncommande'>Votre numéro de commande: </p>
+            <p id='info'>Vos informations: </p> 
+        </div>   
+
+        <footer>Pied de page</footer>
+
+        <script src='/JS/ScriptRecap.js'></script>
+
     </body>
+
+    
+
+    
 </html>
