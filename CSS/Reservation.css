@@ -1,6 +1,7 @@
-    
-body {
-  background-image: url()
+#body{
+  background-image:url(../Medias/fond.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #boutonhaut {
@@ -163,6 +164,15 @@ body {
     #menu-demo2 li:hover a, #menu-demo2 li li:hover a{
     color:#000;
     }
+
+#form{
+  background-color:beige;
+  background-attachment:scroll ;
+  background-size:1000px 710px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-clip:padding-box;
+}
 
 footer {
   background-color: rgb(212, 212, 212);

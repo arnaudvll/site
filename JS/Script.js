@@ -7,10 +7,18 @@ let utilisateur = document.getElementById('utilisateur')
 let mdp = document.getElementById('mdp')
 
 function connexion(){
-    if ((utilisateur,mdp) == (bdd.usr1,bdd.mdp1) || (bdd.usr2,bdd.mdp2) || (bdd.usr3,bdd.mdp3)){
-        return true
-}   else
-        return false
+    if ((utilisateur.value  == bdd.usr1) && (mdp.value == bdd.mdp1)){
+        alert('ok')
+    }
+    else if ((utilisateur.value  == bdd.usr2) && (mdp.value == bdd.mdp2)){
+        alert('ok')
+    }
+    else if ((utilisateur.value  == bdd.usr3) && (mdp.value == bdd.mdp3)){
+        alert('ok')    
+    }    
+    else{
+        alert('Identifiants incorrects')
+    }
 }
 
 boutonhaut = document.getElementById("boutonhaut");

@@ -42,8 +42,34 @@ body{
   margin-right: 230px;
 }
 
-#div-connexion{
-margin-top: 100px;
+#boutonconnexion{
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 20px;
+  border-style: solid;
+  color: #2A2333;
+  text-decoration: none;
+  margin-top: 60px;
+  margin-left: 80px;
+  background-color: rgb(193, 241, 250) ;
+}
+
+#formconnexion{
+  font-family: "Lucida Console", Courier, monospace;
+  display:none;
+  border-style:solid;
+  border-width: 3px;
+  border-color:#2a23334d;
+  height:200px;
+  width:200px;
+  margin-top:50px;
+}
+
+#formconnexion button{
+  font-family: "Lucida Console", Courier, monospace;
+  border-style: solid;
+  text-decoration: none;
+  background-color: rgb(193, 241, 250);
+
 }
 
 #logo{
@@ -54,13 +80,7 @@ margin-top: 100px;
   margin-right: -200px;
 }
 
-.connexion{
-  font-family: "Lucida Console", Courier, monospace;
-  font-size: 25px;
-  border-style: solid;
-  color: #2A2333;
-  text-decoration: none;
-}
+
 
 #titre{
   font-family: "Lucida Console", Courier, monospace;
@@ -75,6 +95,14 @@ p {
   font-family: "Lucida Console", Courier, monospace;
   font-size:18x;
   color: rgb(255, 255, 255)
+}
+
+#boutontri{
+  font-family: "Lucida Console", Courier, monospace;
+  font-size:18px;
+  background-color: rgb(193, 241, 250);
+  border-width: 1px;
+  margin-top: 5px;
 }
 
 #menu-demo2, #menu-demo2 ul{

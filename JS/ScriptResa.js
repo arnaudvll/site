@@ -33,6 +33,8 @@ let popu= [lyon,safari,sf,us,tokyo,asie,barcelone,berlin,nord,jakarta];
 
 let sejourid=new URLSearchParams(window.location.search).get('id');
 
+document.getElementById('form').style='background-image:url(' + retrouverdest().img + ')'
+
 boutonhaut = document.getElementById("boutonhaut");
 
 window.onscroll = function() {scrollFunction()};

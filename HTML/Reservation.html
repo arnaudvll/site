@@ -7,7 +7,7 @@
         <title>Page de réservation</title>
     </head>
 
-    <body>
+    <body id='body' >
         <div id="entete" >
             <div id="div-titre">
                 <h1 id="titre"> Travel-ô-ciraptor </h1>
@@ -47,10 +47,10 @@
             <li><a href="Contact.html"><p>Nous contacter</p></a></li>
         </ul>
 
-        <div id='destination'>Votre voyage: </div><br>
-            <form action="Recapitulatif.html">
-                <fieldset>
-                    <legend >Formulaire de réservation: </legend>
+        <div id='destination' style='font-size:20px;'>Votre voyage: </div><br>
+            <form id='form' action="Recapitulatif.html">
+                <fieldset style='margin-right: 0;'>
+                    <legend>Formulaire de réservation: </legend>
 
                 <label for="nfamille">Nom de famille:</label><br>
                 <input type="text" id="nfamille" name="nfamille" required autofocus><br>
@@ -92,6 +92,8 @@
                 <input type="submit" value="Valider">
                 <input type ="reset" value="Annuler">
                 </fieldset>
+                
+                
             </form>
 
             <footer>Pied de page</footer>
