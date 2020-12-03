@@ -8,23 +8,22 @@ let mdp = document.getElementById('mdp')
 let boutonconnect = document.getElementById('boutonconnexion')
 let boutondeconnect = document.getElementById('boutondeconnexion')
 
+
 function connexion(){
     if ((utilisateur.value  == bdd.usr1) && (mdp.value == bdd.mdp1)){
         document.getElementById('formconnexion').style.display='none'
         boutondeconnect.style.display="block"
-        window.location.hash += 'connexion=1'
-
+        localStorage.setItem('connexion','1')
     }
     else if ((utilisateur.value  == bdd.usr2) && (mdp.value == bdd.mdp2)){
         document.getElementById('formconnexion').style.display='none'
         boutondeconnect.style.display="block"   
-        window.location.hash += 'connexion=1'
-    }
+        localStorage.setItem('connexion','1')  
+        }
     else if ((utilisateur.value  == bdd.usr3) && (mdp.value == bdd.mdp3)){
         document.getElementById('formconnexion').style.display='none'
         boutondeconnect.style.display="block"   
-        window.location.hash += 'connexion=1'
- 
+        localStorage.setItem('connexion','1') 
     }    
     else{
         document.getElementById('msgerreur').style.display='block'
@@ -32,7 +31,7 @@ function connexion(){
 }
 
 function testconnexion(){
-    if (new URLSearchParams(window.location.hash).get('connexion') == '1'){
+    if (localStorage.getItem('connexion') == '1'){
         boutonconnect.style.display='none'
         boutondeconnect.style.display='block'
     }
@@ -117,4 +116,11 @@ function prixtot(){
     document.getElementById('prixtot').innerHTML=prixtot + '€'
 }
 prixtot()
+
+function needconnect(){
+  if (localStorage.getItem("connexion") == "0"){
+    alert('Veuillez vous connecter pour pouvoir commander')
+    return false
+  }
+}
 
