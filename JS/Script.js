@@ -5,21 +5,40 @@ var bdd =
 
 let utilisateur = document.getElementById('utilisateur')
 let mdp = document.getElementById('mdp')
+let boutonconnect = document.getElementById('boutonconnexion')
+let boutondeconnect = document.getElementById('boutondeconnexion')
+let url=window.location.search
 
 function connexion(){
     if ((utilisateur.value  == bdd.usr1) && (mdp.value == bdd.mdp1)){
-        alert('ok')
+        document.getElementById('formconnexion').style.display='none'
+        boutondeconnect.style.display="block"
+        window.location.hash += 'connexion=1'
+
     }
     else if ((utilisateur.value  == bdd.usr2) && (mdp.value == bdd.mdp2)){
-        alert('ok')
+        document.getElementById('formconnexion').style.display='none'
+        boutondeconnect.style.display="block"   
+        window.location.hash += 'connexion=1'
     }
     else if ((utilisateur.value  == bdd.usr3) && (mdp.value == bdd.mdp3)){
-        alert('ok')    
+        document.getElementById('formconnexion').style.display='none'
+        boutondeconnect.style.display="block"   
+        window.location.hash += 'connexion=1'
+ 
     }    
     else{
-        alert('Identifiants incorrects')
+        document.getElementById('msgerreur').style.display='block'
+    }  
+}
+
+function testconnexion(){
+    if (new URLSearchParams(window.location.hash).get('connexion') == '1'){
+        boutonconnect.style.display='none'
+        boutondeconnect.style.display='block'
     }
 }
+testconnexion()
 
 boutonhaut = document.getElementById("boutonhaut");
 

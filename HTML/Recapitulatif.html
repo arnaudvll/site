@@ -3,7 +3,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link type='text/css' rel='stylesheet' href='/CSS/Recap.css'>
+        <link type='text/css' rel='stylesheet' href='../CSS/Recap.css'>
         <title>Récapitulatif de la commande</title>
     </head>
 
@@ -17,9 +17,22 @@
                     <img id="logo" src="../Medias/logo.png">
                 </a>
             </div>
-            <div id="div-connexion">
-                <a class="connexion" href="Connexion.html">Se connecter</a>
+            <div >
+                <button id="boutonconnexion"  onclick='this.style.display="none",document.getElementById("formconnexion").style.display="block"'>Se connecter</button>
             </div>
+            <div>
+                <button id='boutondeconnexion' onclick='this.style.display="none",document.getElementById("boutonconnexion").style.display="block",window.location.hash=""'>Se déconnecter</button>
+            </div>
+            <div id='formconnexion'>
+                <label for="utilisateur">Nom d'utilisateur:</label><br>
+                <input type="text" id="utilisateur" name="utilisateur" required><br><br>
+        
+                <label for="mdp">Mot de passe:</label><br>
+                <input type="password" id="mdp" required><br><br>
+        
+                <button onclick=connexion()>Connexion</button>                  
+                <p id='msgerreur'>Identifiants incorrects. Veuillez réessayer.</p>
+            </div>           
         </div>
 
         <button onclick="topFunction()" id="boutonhaut" >Retour en haut</button>
@@ -47,20 +60,17 @@
             <li><a href="MapMonde.html"><p>Carte du monde</p></a></li>
             <li><a href="Contact.html"><p>Nous contacter</p></a></li>
         </ul>
-
+        <br>
         <div id='content'>
             <h3> Récapitulatif de votre commande:</h3>
             <p id='ncommande'>Votre numéro de commande: </p>
             <p id='info'>Vos informations: </p> 
         </div>   
-
+        <br>
         <footer>Pied de page</footer>
 
-        <script src='/JS/ScriptRecap.js'></script>
+        <script src='../JS/ScriptRecap.js'></script>
 
     </body>
-
-    
-
     
 </html>
