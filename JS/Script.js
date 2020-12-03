@@ -158,3 +158,18 @@ function enleveflouimg(i){
     document.getElementById(i).style.opacity=1;
 }
 
+
+const APIKEY = '91e51fd34b7e2b9e325961c90665cd7b';
+let apiCall = function(ville){
+    let url= `https://api.openweathermap.org/data/2.5/weather?q=${ville}&appid=${APIKEY}&units=metric&lang=fr`;
+    fetch(url)
+        .then((response) => {
+            response.json()
+                .then((data) =>{
+                console.log(data.main.tamp);
+    return data.main.temp;
+                })
+        })
+}
+var meteo_lyon = apiCall('Lyon')
+
