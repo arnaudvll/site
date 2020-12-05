@@ -41,8 +41,6 @@ testconnexion()
 let dateajd=new Date();
 let datedepart=document.getElementById('datedépart');
 let dateretour=document.getElementById('dateretour');
-datedepart.min=dateajd.getFullYear()+'-'+(dateajd.getMonth()+1)+'-'+dateajd.getDate();
-dateretour.min=dateajd.getFullYear()+'-'+(dateajd.getMonth()+1)+'-'+(dateajd.getDate()+1);
 
 let nbadulte=document.getElementById('nbadulte');
 let nbenfant=document.getElementById('nbenfant');
@@ -103,17 +101,40 @@ function retrouverdest(){
 
 document.getElementById('destination').innerHTML+=retrouverdest().nom + ' (' + retrouverdest().prix + '€ par jour)' 
   
-function dates(){
-    dateretour.min=datedepart.valueAsDate.getFullYear()+'-'+(datedepart.valueAsDate.getMonth()+1)+'-'+(datedepart.valueAsDate.getDate()+1);
+function dates(){ //définit les dates de départ et retour minmum en mettant au bon format AAAA-MM-JJ
+  if (dateajd.getDate() < 10){ //transforme J en 0J
+    datedepart.min=dateajd.getFullYear()+'-'+(dateajd.getMonth()+1)+'-0'+dateajd.getDate();
+  }
+  else if (dateajd.getDate() >= 10){
+    datedepart.min=dateajd.getFullYear()+'-'+(dateajd.getMonth()+1)+'-'+dateajd.getDate();
+  } 
+
+  if (datedepart.valueAsDate.getMonth() <= 9){ //transforme M en 0M
+    if (datedepart.valueAsDate.getDate() < 9){
+      dateretour.min=String(datedepart.valueAsDate.getFullYear())+'-0'+String(datedepart.valueAsDate.getMonth()+1)+'-0'+String(datedepart.valueAsDate.getDate()+1)
+    }
+    else if (datedepart.valueAsDate.getDate() >= 9){
+      dateretour.min=String(datedepart.valueAsDate.getFullYear())+'-0'+String(datedepart.valueAsDate.getMonth()+1)+'-'+String(datedepart.valueAsDate.getDate()+1)
+    }
+  }  
+  else if (datedepart.valueAsDate.getMonth() > 9){
+    if (datedepart.valueAsDate.getDate() < 9){
+      dateretour.min=String(datedepart.valueAsDate.getFullYear())+'-'+String(datedepart.valueAsDate.getMonth()+1)+'-0'+String(datedepart.valueAsDate.getDate()+1)
+    }
+    else if (datedepart.valueAsDate.getDate() >= 9){
+      dateretour.min=String(datedepart.valueAsDate.getFullYear())+'-'+String(datedepart.valueAsDate.getMonth()+1)+'-'+String(datedepart.valueAsDate.getDate()+1)
+    }
+  }
 }
+dates()
 
 function prixtot(){
-    let dureesejour=dateretour.valueAsDate.getDate()-datedepart.valueAsDate.getDate()
+    let dureesejour=(dateretour.valueAsDate-datedepart.valueAsDate)/86400000 //on exprime les 2 dates en millisecondes et on divise par un jour en ms
     let prixtot=(0.4 * nbenfant.value * dureesejour * retrouverdest().prix) + (nbadulte.value * dureesejour * retrouverdest().prix)
     if (document.getElementById('ouidej').checked){
         prixtot+=(parseInt(nbadulte.value)+parseInt(nbenfant.value))*12*dureesejour;
     } 
-    document.getElementById('prixtot').innerHTML=prixtot + '€'
+    document.getElementById('prixtot').innerHTML=prixtot + '€' 
 }
 prixtot()
 
