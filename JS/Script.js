@@ -82,6 +82,10 @@ let prixcroissant= [lyon,berlin,barcelone,jakarta,sf,tokyo,nord,safari,asie,us];
 let prixdecroissant= [us,asie,safari,nord,tokyo,sf,jakarta,barcelone,berlin,lyon];
 let popu= [lyon,safari,sf,us,tokyo,asie,barcelone,berlin,nord,jakarta];
 
+
+
+
+
 function AfficherOptTri(){
     document.getElementById('choixtri').style='display:inline;'
 }
@@ -155,15 +159,34 @@ function enleveflouimg(i){
     document.getElementById(i).style.opacity=1;
 }
 
-
-const APIKEY = '91e51fd34b7e2b9e325961c90665cd7b';
 function meteo(ville){
-    let url= 'https://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=' + APIKEY + '&units=metric&lang=fr';
+    const APIKEY = '91e51fd34b7e2b9e325961c90665cd7b';
+    let url= 'https://api.openweathermap.org/data/2.5/weather?q=' + ville.nom + '&appid=' + APIKEY + '&units=metric&lang=fr';
     fetch(url)
-        .then(function(resp) { return resp.json() }) // Convert data to json
+        .then(function(resp) { return resp.json() }) //convertit la réponse en format JSON
         .then(function(data) {
-            offre.innerHTML += data.main.temp
+            creationmeteo(data,ville)        
         }) 
 }
 
-meteo('lyon')
+function creationmeteo(d,v){ //affiche en fonction du tri choisi la température de la ville 
+    if (document.getElementById('choixtri').value==='1'){
+        nville=prixcroissant.indexOf(v)
+        description[nville].innerHTML+= ' // ' + d.main.temp + '°C'
+    }
+    else if (document.getElementById('choixtri').value==='2'){
+        nville=prixdecroissant.indexOf(v)
+        description[nville].innerHTML+= ' // ' + d.main.temp + '°C'
+    }
+    else if (document.getElementById('choixtri').value==='3'){
+        nville=popu.indexOf(v)
+        description[nville].innerHTML+= ' // ' + d.main.temp + '°C'
+    }  
+}
+
+function affichagemeteo(){ //boucle pour afficher la température pour chaque ville (sauf les circuits)
+    for (i of prixcroissant.slice(0,6)){
+        meteo(i)
+    }
+}
+affichagemeteo()

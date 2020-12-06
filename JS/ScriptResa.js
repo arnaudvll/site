@@ -134,7 +134,7 @@ function prixtot(){
     if (document.getElementById('ouidej').checked){
         prixtot+=(parseInt(nbadulte.value)+parseInt(nbenfant.value))*12*dureesejour;
     } 
-    document.getElementById('prixtot').innerHTML=prixtot + '€' 
+    document.getElementById('prixtot').innerHTML='Prix total: ' + prixtot + '€' 
 }
 prixtot()
 
