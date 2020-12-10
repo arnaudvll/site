@@ -5,6 +5,7 @@ body{
   background-size: cover;
   height: auto;
   padding:0px;
+  overflow-x: hidden;
 }
 
 #boutonhaut {

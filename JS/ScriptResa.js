@@ -61,13 +61,13 @@ let barcelone= new destination('3',"../Medias/Barcelone.jpg",250,'Barcelone');
 let sf= new destination('4',"../Medias/SF.jpg",400,'San Francisco');
 let jakarta= new destination('5',"../Medias/Jakarta.jpg",350,'Jakarta');
 let tokyo= new destination('6',"../Medias/Tokyo.jpg",400,'Tokyo');
-let us= new destination('7',"../Medias/US.jpg",1300,'Road trip US');
+let canada= new destination('7',"../Medias/Canada.png",1300,'Road trip Canada');
 let nord= new destination('8',"../Medias/Nord.jpg",900,'Pays du nord');
 let safari= new destination('9',"../Medias/safari.jpg",1000,'Safari');
 let asie= new destination('10',"../Medias/Asie.jpg",1200,'Road trip Asie');
-let prixcroissant= [lyon,berlin,barcelone,jakarta,sf,tokyo,nord,safari,asie,us];
-let prixdecroissant= [us,asie,safari,nord,tokyo,sf,jakarta,barcelone,berlin,lyon];
-let popu= [lyon,safari,sf,us,tokyo,asie,barcelone,berlin,nord,jakarta];
+let prixcroissant= [lyon,berlin,barcelone,jakarta,sf,tokyo,nord,safari,asie,canada];
+let prixdecroissant= [canada,asie,safari,nord,tokyo,sf,jakarta,barcelone,berlin,lyon];
+let popu= [lyon,safari,sf,canada,tokyo,asie,barcelone,berlin,nord,jakarta];
 
 let sejourid=new URLSearchParams(window.location.search).get('id');
 
@@ -134,7 +134,7 @@ function prixtot(){
     if (document.getElementById('ouidej').checked){
         prixtot+=(parseInt(nbadulte.value)+parseInt(nbenfant.value))*12*dureesejour;
     } 
-    document.getElementById('prixtot').innerHTML='Prix total: ' + prixtot + '€' 
+    document.getElementById('prixtot').innerHTML= prixtot + '€' 
 }
 prixtot()
 
