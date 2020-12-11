@@ -39,7 +39,7 @@ function testconnexion(){
 testconnexion()
 
 
-let prixcroissants= ['lyon','berlin','barcelone','jakarta','sf','canada','tokyo'];
+//on colore les pays au passage de la souris sur le nom dans la liste
 
 document.getElementById('lyon').onmouseover = function(){
     document.getElementsByClassName('lyon')[0].style.fill='rgb(193, 241, 250)'
@@ -97,7 +97,7 @@ document.getElementById('tokyo').onmouseout = function(){
     }
 
 
-document.getElementById('safari').onmouseover = function(){   //on colore les pays au passage de la souris sur le nom dans la liste
+document.getElementById('safari').onmouseover = function(){   
     for (c of [0,1,2]) {
         document.getElementsByClassName('safari')[c].style.fill='rgb(193, 241, 250)'
     }

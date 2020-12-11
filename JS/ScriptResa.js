@@ -38,6 +38,22 @@ function testconnexion(){
 }
 testconnexion()
 
+boutonhaut = document.getElementById("boutonhaut");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    boutonhaut.style.display = "block";
+  } else {
+    boutonhaut.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.documentElement.scrollTop = 0; 
+}
+
 let dateajd=new Date();
 let datedepart=document.getElementById('datedépart');
 let dateretour=document.getElementById('dateretour');
@@ -71,26 +87,9 @@ let popu= [lyon,safari,sf,canada,tokyo,asie,barcelone,berlin,nord,jakarta];
 
 let sejourid=new URLSearchParams(window.location.search).get('id');
 
-document.getElementById('form').style='background-image:url(' + retrouverdest().img + ')'
+document.getElementById('form').style='background-image:url(' + retrouverdest().img + ')' //affichage de la destination choisie
 
-boutonhaut = document.getElementById("boutonhaut");
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    boutonhaut.style.display = "block";
-  } else {
-    boutonhaut.style.display = "none";
-  }
-}
-
-function topFunction() {
-  document.documentElement.scrollTop = 0; 
-}
-
-
-function retrouverdest(){
+function retrouverdest(){ //retrouve la destination choisie
     let i
     for (i of prixcroissant){
         if (i.id==sejourid){
@@ -138,7 +137,7 @@ function prixtot(){
 }
 prixtot()
 
-function needconnect(){
+function needconnect(){ //empeche l'envoi du formulaire si l'utilisateur n'est pas connecté
   if (localStorage.getItem("connexion") == "0"){
     alert('Veuillez vous connecter pour pouvoir commander')
     return false
